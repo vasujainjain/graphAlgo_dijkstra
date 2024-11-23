@@ -1,0 +1,58 @@
+Code Structure and Functionality:
+
+Graph Representation:
+
+Files: graph.h and graph.c
+Purpose: Define a simple graph data structure and functions for creating and manipulating the graph.
+Key Functions:
+createGraph(): Initializes a new graph with a specified number of vertices.
+addEdge(): Adds an edge between two vertices with a given weight.
+printGraph(): Displays the graph's adjacency list.
+Linked List Implementation:
+
+Files: linkedlist.h and linkedlist.c
+Purpose: Define a simple linked list data structure used in the graph implementation.
+Key Functions:
+createNode(): Creates a new node with a specified value.
+insertNode(): Inserts a node into the linked list.
+deleteNode(): Removes a node from the linked list.
+Dijkstra's Algorithm Implementation:
+
+Files: dijkstra.h and dijkstra.c
+Purpose: Implement Dijkstra's shortest path algorithm.
+Key Functions:
+dijkstra(): Computes the shortest paths from a source vertex to all other vertices in the graph.
+printShortestPath(): Displays the shortest path from the source to a specified vertex.
+Main Program:
+
+File: main.c
+Purpose: Serves as the entry point of the program, testing the Dijkstra's algorithm implementation with sample graphs.
+Key Functions:
+main(): Creates a sample graph, adds edges, runs the Dijkstra algorithm, and prints the results.
+Build Automation:
+
+File: Makefile
+Purpose: Automates the build process of the project.
+Key Targets:
+all: Compiles all source files into an executable.
+clean: Removes compiled objects and executables.
+How Each Function Works:
+
+Graph Functions:
+
+createGraph(int vertices): Allocates memory for a graph with the specified number of vertices and initializes its adjacency list.
+addEdge(Graph* graph, int src, int dest, int weight): Adds an edge from the source vertex to the destination vertex with the given weight by updating the adjacency list.
+printGraph(Graph* graph): Iterates through the adjacency list and prints each vertex's connections and corresponding weights.
+Linked List Functions:
+
+createNode(int value): Allocates memory for a new node with the specified value and returns a pointer to it.
+insertNode(Node** head, int value): Inserts a new node with the given value at the beginning of the linked list.
+deleteNode(Node** head, int value): Searches for a node with the specified value and removes it from the linked list.
+Dijkstra's Algorithm Functions:
+
+dijkstra(Graph* graph, int src): Uses a priority queue to find the shortest paths from the source vertex to all other vertices. It maintains an array of distances and a set of visited vertices to ensure each vertex is processed only once.
+printShortestPath(int parent[], int j): Recursively prints the path from the source vertex to vertex j using the parent array, which stores the shortest path tree.
+Main Function:
+
+main(): Demonstrates the usage of the graph and Dijkstra's algorithm functions by creating a sample graph, adding edges, running the algorithm, and printing the shortest paths from the source vertex.
+Conclusion: This project provides a clear and modular implementation of Dijkstra's algorithm in C. By organizing the code into separate files for the graph structure, linked list, algorithm, and main program, it ensures maintainability and readability. Each function is designed with a specific purpose, contributing to the overall functionality of computing the shortest paths in a graph.
